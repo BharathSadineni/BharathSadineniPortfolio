@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaTools, FaCloud, FaGlobe, FaRobot, FaChartBar, FaBullseye, FaCode, FaDatabase, FaLightbulb } from 'react-icons/fa';
+import { FaTools, FaGlobe, FaRobot, FaCode, FaDatabase, FaLightbulb } from 'react-icons/fa';
 
 const skills = [
   {
