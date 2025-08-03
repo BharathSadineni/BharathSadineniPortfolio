@@ -8,6 +8,15 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Bharath Sadineni Resume.pdf';
+    link.download = 'Bharath Sadineni Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-github-dark-bg border-b border-github-light-border dark:border-github-dark-border">
       <nav className="container mx-auto px-4 py-4">
@@ -61,6 +70,12 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             >
               Connect
             </ScrollLink>
+            <button
+              onClick={handleResumeDownload}
+              className="text-github-light-text dark:text-github-dark-text hover:text-github-light-primary dark:hover:text-github-dark-primary cursor-pointer"
+            >
+              Resume
+            </button>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-github-light-muted dark:hover:bg-github-dark-muted github-transition"
